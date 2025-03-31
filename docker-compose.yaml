@@ -1,0 +1,8 @@
+# version: "3.8"  # 指定 Compose 文件版本（推荐 3.8+）
+services:       # 定义所有服务（容器）
+  stm32:
+    build: .     # 使用 Dockerfile 构建镜像
+    volumes:
+      - ./:/workspace
+    command: sleep infinity  # 保持容器运行
+    working_dir: /workspace
